@@ -49,7 +49,7 @@ def check_saves(destination_directory, days):
                 
                 age_in_days = (current_date - file_date).days
                 # Check if file is older than days specified
-                if age_in_days > days:
+                if age_in_days > int(days):
                     file_path = os.path.join(destination_directory, file)
                     os.remove(file_path)
                     print(f"Deleted old file: {file}")
