@@ -18,7 +18,7 @@ python script.py <source_directory> <destination_directory> <saved_item> <days_b
 ### Parameters
 - `<source_directory>`: The directory containing the file to be backed up.
 - `<destination_directory>`: The directory where the backup will be stored.
-- `<saved_file>`: The name of the file/directory to back up (e.g., `myfile.txt`, `mydirectory`).
+- `<saved_item>`: The name of the file/directory to back up (e.g., `myfile.txt`, `mydirectory`).
 - `<days_before_deletion>`: The number of days after which backup files are considered old and deleted.
 
 ### Example
