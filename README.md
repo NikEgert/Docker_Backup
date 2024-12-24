@@ -12,13 +12,13 @@ This Python script is designed to back up a specified file from a source directo
 
 ### Command-line Syntax
 ```bash
-python script.py <source_directory> <destination_directory> <saved_file> <days_before_deletion>
+python script.py <source_directory> <destination_directory> <saved_item> <days_before_deletion>
 ```
 
 ### Parameters
 - `<source_directory>`: The directory containing the file to be backed up.
 - `<destination_directory>`: The directory where the backup will be stored.
-- `<saved_file>`: The name of the file to back up (e.g., `myfile.txt`).
+- `<saved_file>`: The name of the file/directory to back up (e.g., `myfile.txt`, `mydirectory`).
 - `<days_before_deletion>`: The number of days after which backup files are considered old and deleted.
 
 ### Example
@@ -33,11 +33,11 @@ This command backs up `myfile.txt` from `/path/to/source` to `/path/to/destinati
 1. **File Backup**:
    - Validates the existence of the source directory and file.
    - Creates the destination directory if it doesn’t exist.
-   - Copies the file to the destination directory with a new name formatted as `filename_YYYY-MM-DD.tar`.
+   - Copies the file/directory to the destination directory with a new name formatted as `filename_YYYY-MM-DD.tar`.
 
 2. **Old File Cleanup**:
-   - Iterates through the files in the destination directory.
-   - Parses the dates from the file names.
+   - Iterates through the `.tar` files in the destination directory.
+   - Parses the dates from the file/directory names.
    - Deletes files older than the specified number of days.
 
 ## Requirements
@@ -49,6 +49,3 @@ This command backs up `myfile.txt` from `/path/to/source` to `/path/to/destinati
 
 - Ensure you have the necessary permissions to access the specified directories and files.
 - Backup files must follow the `filename_YYYY-MM-DD.tar` naming convention to enable proper cleanup.
-
-## TODO
-Integrate script with docker container
