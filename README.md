@@ -1,6 +1,6 @@
-# File Backup Script
+# File/Directory Backup Script
 
-This Python script is designed to back up a specified file from a source directory to a destination directory. It also manages older backups by automatically deleting files that exceed a specified age.
+This Python script is designed to back up a specified file or directory from a source directory to a destination directory. It also manages older backups by automatically deleting files that exceed a specified age.
 
 ## Features
 
