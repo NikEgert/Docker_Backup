@@ -4,7 +4,7 @@ This Python script is designed to back up a specified file from a source directo
 
 ## Features
 
-- **File Backup**: Copies the specified file to a destination directory with a timestamped `.tar` extension.
+- **File/Directory Backup**: Copies the specified file to a destination directory with a timestamped `.tar` extension.
 - **Directory Management**: Creates the destination directory if it doesn't exist.
 - **Old File Cleanup**: Automatically removes backup files older than a defined number of days.
 
@@ -16,7 +16,7 @@ python script.py <source_directory> <destination_directory> <saved_item> <days_b
 ```
 
 ### Parameters
-- `<source_directory>`: The directory containing the file to be backed up.
+- `<source_directory>`: The directory containing the file/directory to be backed up.
 - `<destination_directory>`: The directory where the backup will be stored.
 - `<saved_item>`: The name of the file/directory to back up (e.g., `myfile.txt`, `mydirectory`).
 - `<days_before_deletion>`: The number of days after which backup files are considered old and deleted.
@@ -31,12 +31,12 @@ This command backs up `myfile.txt` from `/path/to/source` to `/path/to/destinati
 ## How It Works
 
 1. **File Backup**:
-   - Validates the existence of the source directory and file.
+   - Validates the existence of the source directory and backup material.
    - Creates the destination directory if it doesn’t exist.
    - Copies the file/directory to the destination directory with a new name formatted as `filename_YYYY-MM-DD.tar`.
 
-2. **Old File Cleanup**:
-   - Iterates through the `.tar` files in the destination directory.
+2. **Old File/Directory Cleanup**:
+   - Iterates through the `.tar` files/directories in the destination directory.
    - Parses the dates from the file/directory names.
    - Deletes files older than the specified number of days.
 
